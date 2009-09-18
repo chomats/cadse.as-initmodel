@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.0
+Created-By: envsam
+Export-Package: fede.workspace.role.initmodel;version="1.0.0",fede.wor
+ kspace.tool.loadmodel.model.jaxb;version="1.0.0",fr.imag.adele.fede.w
+ orkspace.as.initmodel;version="1.0.0"
+Bundle-ClassPath: .
+Bundle-Name: fr.imag.adele.cadse.as.workspace.initmodel
+Bundle-Localization: plugin
+Bundle-Vendor: Adele/LIG/ Grenoble University, France
+Eclipse-LazyStart: false
+Bundle-Version: 2.2.1.qualifier
+Bundle-ManifestVersion: 2
+Bundle-Description: Bundle fr.imag.adele.cadse.as.workspace.initmodel
+Bundle-SymbolicName: fr.imag.adele.cadse.as.workspace.initmodel;single
+ ton:=true
+Import-Package: com.sun.xml.bind.v2;version="2.1.5",
+ fede.workspace.role.initmodel;version="1.0.0",
+ fede.workspace.tool.loadmodel.model.jaxb;version="1.0.0",
+ fr.imag.adele.cadse.core;version="1.0.0",
+ fr.imag.adele.cadse.core.attribute;version="1.0.0",
+ fr.imag.adele.cadse.core.var;version="1.0.0",
+ fr.imag.adele.fede.workspace.as.initmodel;version="1.0.0",
+ javax.xml.bind,
+ javax.xml.bind.annotation,
+ javax.xml.stream
+
