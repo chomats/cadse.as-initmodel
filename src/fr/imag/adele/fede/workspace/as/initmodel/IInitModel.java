@@ -61,12 +61,7 @@ public interface IInitModel {
 	 */
 	int executeCadses(CadseRuntime... cadseName) throws ErrorWhenLoadedModel;
 
-	/**
-	 * Gets the loaded cadses.
-	 * 
-	 * @return the loaded cadses
-	 */
-	String[] getLoadedCadses();
+	
 
 	/**
 	 * List cadse name.
