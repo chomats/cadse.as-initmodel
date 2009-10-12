@@ -63,13 +63,6 @@ public interface IInitModel {
 
 	
 
-	/**
-	 * List cadse name.
-	 * 
-	 * @return the string[]
-	 */
-	String[] listCadseName();
-
 	void save(CCadse test, File file) throws JAXBException, FileNotFoundException;
 
 	CCadse load(File file) throws FileNotFoundException, JAXBException;
