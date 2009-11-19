@@ -17,7 +17,6 @@ Import-Package: com.sun.xml.bind.v2;version="2.1.5",
  fr.imag.adele.cadse.core.attribute;version="2.2.1",
  fr.imag.adele.cadse.core.var;version="2.2.1",
  fr.imag.adele.fede.workspace.as.initmodel;version="2.2.1",
- fr.imag.adele.packageinfo;version="1.0.0",
  javax.xml.bind,
  javax.xml.bind.annotation,
  javax.xml.stream
