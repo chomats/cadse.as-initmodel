@@ -1,0 +1,6 @@
+<binding defaultBindingType = "type">
+	<package>
+		<name>fede.workspace.tool.loadmodel.internal.model.castor</name>
+		<namespace>http://fr.imag.adele/fede/workspace/model</namespace>
+	</package>
+</binding>
