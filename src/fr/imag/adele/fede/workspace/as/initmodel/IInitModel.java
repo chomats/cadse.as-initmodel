@@ -25,7 +25,7 @@ import javax.xml.bind.JAXBException;
 
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseRuntime;
-import fr.imag.adele.cadse.core.CompactUUID;
+import java.util.UUID;
 import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
@@ -84,7 +84,7 @@ public interface IInitModel {
 	Object convertToCValue(CValuesType value, IAttributeType<?> attDefinition);
 
 	// method to interact with cadse root and cadseg
-	public CompactUUID getUUID(String id);
+	public UUID getUUID(String id);
 
 	public int getFlag(CValuesType type);
 
