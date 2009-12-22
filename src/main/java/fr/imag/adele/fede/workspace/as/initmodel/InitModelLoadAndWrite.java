@@ -1,13 +1,13 @@
 package fr.imag.adele.fede.workspace.as.initmodel;
 
-import fede.workspace.tool.loadmodel.model.jaxb.CValuesType;
-import fede.workspace.tool.loadmodel.model.jaxb.ObjectFactory;
 import fr.imag.adele.cadse.core.CadseException;
-import fr.imag.adele.cadse.core.LogicalWorkspace;
+import fr.imag.adele.cadse.core.var.ContextVariable;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
+import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.attribute.IAttributeType;
-import fr.imag.adele.cadse.core.var.ContextVariable;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.ObjectFactory;
 
 public interface InitModelLoadAndWrite {
 
