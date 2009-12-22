@@ -26,15 +26,14 @@ import javax.xml.bind.JAXBException;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseRuntime;
 import java.util.UUID;
-import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
+import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.attribute.IAttributeType;
-import fede.workspace.role.initmodel.ErrorWhenLoadedModel;
-import fede.workspace.tool.loadmodel.model.jaxb.CAttType;
-import fede.workspace.tool.loadmodel.model.jaxb.CCadse;
-import fede.workspace.tool.loadmodel.model.jaxb.CItemType;
-import fede.workspace.tool.loadmodel.model.jaxb.CValuesType;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CAttType;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CCadse;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType;
+import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType;
 
 /**
  * 
@@ -60,8 +59,6 @@ public interface IInitModel {
 	 *             the error when loaded model
 	 */
 	int executeCadses(CadseRuntime... cadseName) throws ErrorWhenLoadedModel;
-
-	
 
 	void save(CCadse test, File file) throws JAXBException, FileNotFoundException;
 

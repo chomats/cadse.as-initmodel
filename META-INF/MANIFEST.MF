@@ -1,25 +1,20 @@
 Manifest-Version: 1.0
+Export-Package: fr.imag.adele.fede.workspace.as.initmodel;uses:="fr.im
+ ag.adele.cadse.core,fr.imag.adele.cadse.core.var,fr.imag.adele.cadse.
+ core.attribute,javax.xml.bind,fr.imag.adele.fede.workspace.as.initmod
+ el.jaxb",fr.imag.adele.fede.workspace.as.initmodel.jaxb;uses:="javax.
+ xml.bind.annotation"
+Built-By: chomats
+Build-Jdk: 1.6.0_17
+Bundle-Version: 2.3.0.SNAPSHOT
+Tool: Bnd-0.0.357
+Bundle-Name: fr.imag.adele.cadse.as.initmodel
+Bnd-LastModified: 1261479095161
+Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
-Bundle-Name: fr.imag.adele.cadse.as.workspace.initmodel
-Bundle-SymbolicName: fr.imag.adele.cadse.as.workspace.initmodel;singleton:=true
-Bundle-Vendor: Adele/LIG/ Grenoble University, France
-Bundle-Version: 2.2.1.qualifier
-Bundle-Localization: plugin
-Bundle-ClassPath: .
-Eclipse-LazyStart: false
-Export-Package: fede.workspace.role.initmodel;version="2.2.1",
- fede.workspace.tool.loadmodel.model.jaxb;version="2.2.1",
- fr.imag.adele.fede.workspace.as.initmodel;version="2.2.1"
-Import-Package: com.sun.xml.bind.v2;version="2.1.5",
- fede.workspace.role.initmodel;version="2.2.1",
- fede.workspace.tool.loadmodel.model.jaxb;version="2.2.1",
- fr.imag.adele.cadse.core;version="2.2.1",
- fr.imag.adele.cadse.core.attribute;version="2.2.1",
- fr.imag.adele.cadse.core.var;version="2.2.1",
- fr.imag.adele.fede.workspace.as.initmodel;version="2.2.1",
- javax.xml.bind,
- javax.xml.bind.annotation,
- javax.xml.stream
-Created-By: envsam
-Bundle-Description: Bundle fr.imag.adele.cadse.as.workspace.initmodel
+Bundle-SymbolicName: fr.imag.adele.cadse.as.initmodel
+Import-Package: fr.imag.adele.cadse.core,fr.imag.adele.cadse.core.attr
+ ibute,fr.imag.adele.cadse.core.var,fr.imag.adele.fede.workspace.as.in
+ itmodel,fr.imag.adele.fede.workspace.as.initmodel.jaxb,javax.xml.bind
+ ;version="2.2",javax.xml.bind.annotation;version="2.2"
 
