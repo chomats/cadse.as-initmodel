@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 
 /**
  * This object contains factory methods for each Java content interface and Java
- * element interface generated in the fede.workspace.tool.loadmodel.model.jaxb
+ * element interface generated in the fr.imag.adele.fede.workspace.as.initmodel.jaxb
  * package.
  * <p>
  * An ObjectFactory allows you to programatically construct new instances of the
@@ -27,7 +27,7 @@ public class ObjectFactory {
 	/**
 	 * Create a new ObjectFactory that can be used to create new instances of
 	 * schema derived classes for package:
-	 * fede.workspace.tool.loadmodel.model.jaxb
+	 * fr.imag.adele.fede.workspace.as.initmodel.jaxb
 	 * 
 	 */
 	public ObjectFactory() {
