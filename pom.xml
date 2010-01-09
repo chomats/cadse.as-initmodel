@@ -22,8 +22,8 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Export-Package>fr.imag.adele.fede.workspace.as.initmodel,
-                        fr.imag.adele.fede.workspace.as.initmodel.jaxb</Export-Package>
+                        <Export-Package>fr.imag.adele.fede.workspace.as.initmodel;version="${version.cadse}",
+                        fr.imag.adele.fede.workspace.as.initmodel.jaxb;version="${version.cadse}"</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>
