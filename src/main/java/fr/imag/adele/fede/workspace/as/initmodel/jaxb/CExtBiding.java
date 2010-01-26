@@ -15,21 +15,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- *         		la description d'un lien entre deux item. Ce lien est
- *         		descriptif il point vers un item ayant une key donné
- *         	
- * 
- * <p>Java class for c-link-description complex type.
+ * <p>Java class for c-ext-biding complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="c-link-description">
+ * &lt;complexType name="c-ext-biding">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;attribute name="type" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="key" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="uuid_it" type="{http://fr.imag.adele/fede/workspace/model}uuid" />
+ *       &lt;attribute name="uuid_ext" type="{http://fr.imag.adele/fede/workspace/model}uuid" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -38,60 +33,60 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "c-link-description")
-public class CLinkDescription {
+@XmlType(name = "c-ext-biding")
+public class CExtBiding {
 
-    @XmlAttribute(required = true)
-    protected String type;
-    @XmlAttribute(required = true)
-    protected String key;
+    @XmlAttribute(name = "uuid_it")
+    protected String uuidIt;
+    @XmlAttribute(name = "uuid_ext")
+    protected String uuidExt;
 
     /**
-     * Gets the value of the type property.
+     * Gets the value of the uuidIt property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getType() {
-        return type;
+    public String getUuidIt() {
+        return uuidIt;
     }
 
     /**
-     * Sets the value of the type property.
+     * Sets the value of the uuidIt property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setType(String value) {
-        this.type = value;
+    public void setUuidIt(String value) {
+        this.uuidIt = value;
     }
 
     /**
-     * Gets the value of the key property.
+     * Gets the value of the uuidExt property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getKey() {
-        return key;
+    public String getUuidExt() {
+        return uuidExt;
     }
 
     /**
-     * Sets the value of the key property.
+     * Sets the value of the uuidExt property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setKey(String value) {
-        this.key = value;
+    public void setUuidExt(String value) {
+        this.uuidExt = value;
     }
 
 }

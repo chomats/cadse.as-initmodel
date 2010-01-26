@@ -3,20 +3,28 @@
 <xsd:element name="c-cadse">
    <xsd:complexType>
    	<xsd:sequence>
-   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="cadse-ref" type="c-cadse-ref">
+   		<xsd:element maxOccurs="unbounded" minOccurs="0"
+   			name="cadse-ref" type="c-cadse-ref">
    		</xsd:element>
-   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="item-type" type="c-item-type">
+   		<xsd:element maxOccurs="unbounded" minOccurs="0"
+   			name="item-type" type="c-item-type">
    		</xsd:element>
-   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="ext-item-type" type="c-extension-item-type">
+   		<xsd:element maxOccurs="unbounded" minOccurs="0"
+   			name="ext-item-type" type="c-extension-item-type">
    		</xsd:element>
-   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="item" type="c-item">
+   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="item"
+   			type="c-item">
    		</xsd:element>
-   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="test-operation" type="c-operation">
+   		<xsd:element maxOccurs="unbounded" minOccurs="0"
+   			name="test-operation" type="c-operation">
    		</xsd:element>
-   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="test-operation-type" type="c-operation-type">
+   		<xsd:element maxOccurs="unbounded" minOccurs="0"
+   			name="test-operation-type" type="c-operation-type">
    		</xsd:element>
-   		<xsd:element maxOccurs="unbounded" minOccurs="0" name="link-binding" type="c-binding-link">
+   		<xsd:element maxOccurs="unbounded" minOccurs="0"
+   			name="link-binding" type="c-binding-link">
    		</xsd:element>
+   		<xsd:element name="ext-binding" type="c-ext-biding" minOccurs="0" maxOccurs="unbounded"></xsd:element>
    	</xsd:sequence>
    	<xsd:attribute name="name" type="xsd:string" use="required"/>
    	<xsd:attribute name="id" type="uuid"/>
@@ -31,7 +39,7 @@
             <xsd:attribute name="display-name" type="xsd:string"/>
         </xsd:complexType>
     </xsd:element>
-	<xsd:complexType abstract="true" name="c-abs-item-type">
+	<xsd:complexType abstract="true" name="c-type-definition">
 	 <xsd:complexContent>
 		 <xsd:extension base="c-item">
 			<xsd:sequence>
@@ -71,7 +79,7 @@
 
 	<xsd:complexType name="c-item-type">
 		<xsd:complexContent>
-			<xsd:extension base="c-abs-item-type">
+			<xsd:extension base="c-type-definition">
 				<xsd:attribute name="has-content" type="xsd:boolean" use="required">
 				</xsd:attribute>
 
@@ -97,64 +105,87 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="c-link-type">
-	<xsd:complexContent>
-		 <xsd:extension base="c-link">
-		<xsd:annotation>
-			<xsd:documentation>
-				Definition d'un type de lien. L'attribut name est le nom
-				du lien. min a une valeur supperieur ou egale a 0. max a
-				une valeur surperieur ou egale a min ou -1 pour infinie.
-			</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element maxOccurs="unbounded" minOccurs="0" name="constraints" type="c-constraint">
-			</xsd:element>
-		</xsd:sequence>
-		<xsd:attribute name="name" type="xsd:string" use="required"/>
-		<xsd:attribute name="min" type="xsd:int" use="required">
-		</xsd:attribute>
-		<xsd:attribute name="max" type="xsd:int" use="required">
-		</xsd:attribute>
-		<xsd:attribute name="isAggregation" type="xsd:boolean" use="required">
-		</xsd:attribute>
-		<xsd:attribute name="isAnnotation" type="xsd:boolean" use="required">
-		</xsd:attribute>
-		<xsd:attribute name="isComposition" type="xsd:boolean" use="required">
-		</xsd:attribute>
-		<xsd:attribute name="isRequire" type="xsd:boolean" use="required">
-		</xsd:attribute>
-		<xsd:attribute name="isPart" type="xsd:boolean" use="required">
-		</xsd:attribute>
-		<xsd:attribute name="destination" type="uuid" use="required">
-		</xsd:attribute>
-		<xsd:attribute name="selection-expression" type="xsd:string" use="optional">
-		</xsd:attribute>
-		<xsd:attribute name="inverse-link" type="xsd:string" use="optional">
-		</xsd:attribute>
-		<xsd:attribute name="association-item-type" type="uuid" use="optional">
-		</xsd:attribute>
-		<xsd:attribute name="intID" type="xsd:int" use="required">
-			<xsd:annotation>
-				<xsd:documentation>
-					unique int id in all link type from the source
-				</xsd:documentation>
-			</xsd:annotation>
-		</xsd:attribute>
-		<xsd:attribute name="cst-name" type="xsd:string"/>
-		<xsd:attribute name="manager-class" type="xsd:string" use="optional">
-		</xsd:attribute>
-		<xsd:attribute name="id" type="uuid"/>
-		<xsd:attribute name="isNatif" type="xsd:boolean"/>
-        <xsd:attribute name="tw-evolution" type="evolutionKind-type"/>
-        <xsd:attribute name="tw-update" type="updateKind-type"/>
-        <xsd:attribute name="tw-commit" type="commitKind-type"/>
-        <xsd:attribute name="tw-rev-specific" type="xsd:boolean" use="required"/>
-        <xsd:attribute name="tw-evol-destination" type="evolutionDestinationKind-type"/>
-        <xsd:attribute name="tw-coupled" type="xsd:boolean" use="required"/>
-		<xsd:attribute name="hidden" type="xsd:boolean"/>
-        </xsd:extension>
+		<xsd:complexContent>
+			<xsd:extension base="c-link">
+				<xsd:annotation>
+					<xsd:documentation>
+						Definition d'un type de lien. L'attribut name
+						est le nom du lien. min a une valeur supperieur
+						ou egale a 0. max a une valeur surperieur ou
+						egale a min ou -1 pour infinie.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="0"
+						name="constraints" type="c-constraint">
+					</xsd:element>
+				</xsd:sequence>
+				<xsd:attribute name="name" type="xsd:string"
+					use="required" />
+				<xsd:attribute name="min" type="xsd:int"
+					use="required">
+				</xsd:attribute>
+				<xsd:attribute name="max" type="xsd:int"
+					use="required">
+				</xsd:attribute>
+				<xsd:attribute name="isAggregation" type="xsd:boolean"
+					use="required">
+				</xsd:attribute>
+				<xsd:attribute name="isAnnotation" type="xsd:boolean"
+					use="required">
+				</xsd:attribute>
+				<xsd:attribute name="isComposition" type="xsd:boolean"
+					use="required">
+				</xsd:attribute>
+				<xsd:attribute name="isGroup" type="xsd:boolean" use="required"></xsd:attribute>
+				<xsd:attribute name="isRequire" type="xsd:boolean"
+					use="required">
+				</xsd:attribute>
+				<xsd:attribute name="isMapping" type="xsd:boolean" use="required"></xsd:attribute>
+				<xsd:attribute name="isPart" type="xsd:boolean"
+					use="required">
+				</xsd:attribute>
+				<xsd:attribute name="destination" type="uuid"
+					use="required">
+				</xsd:attribute>
+				<xsd:attribute name="selection-expression"
+					type="xsd:string" use="optional">
+				</xsd:attribute>
+				<xsd:attribute name="inverse-link" type="xsd:string"
+					use="optional">
+				</xsd:attribute>
+				<xsd:attribute name="association-item-type" type="uuid"
+					use="optional">
+				</xsd:attribute>
+				<xsd:attribute name="intID" type="xsd:int"
+					use="required">
+					<xsd:annotation>
+						<xsd:documentation>
+							unique int id in all link type from the
+							source
+						</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="cst-name" type="xsd:string" />
+				<xsd:attribute name="manager-class" type="xsd:string"
+					use="optional">
+				</xsd:attribute>
+				<xsd:attribute name="id" type="uuid" />
+				<xsd:attribute name="isNatif" type="xsd:boolean" />
+				<xsd:attribute name="tw-evolution"
+					type="evolutionKind-type" />
+				<xsd:attribute name="tw-update" type="updateKind-type" />
+				<xsd:attribute name="tw-commit" type="commitKind-type" />
+				<xsd:attribute name="tw-rev-specific" type="xsd:boolean"
+					use="required" />
+				<xsd:attribute name="tw-evol-destination"
+					type="evolutionDestinationKind-type" />
+				<xsd:attribute name="tw-coupled" type="xsd:boolean"
+					use="required" />
+				<xsd:attribute name="hidden" type="xsd:boolean" />
+			</xsd:extension>
 		</xsd:complexContent>
-    </xsd:complexType>
+	</xsd:complexType>
 
 	<xsd:complexType name="c-values-type">
 		<xsd:sequence>
@@ -331,7 +362,7 @@
 
   <xsd:complexType name="c-extension-item-type">
   	<xsd:complexContent>
-  		<xsd:extension base="c-abs-item-type">
+  		<xsd:extension base="c-type-definition">
   			<xsd:attribute name="item-type-source" type="uuid"/>
   		</xsd:extension>
   	</xsd:complexContent>
@@ -564,4 +595,9 @@
     </xsd:restriction>
   </xsd:simpleType>
     <xsd:complexType name="TreeView"/>
+
+    <xsd:complexType name="c-ext-biding">
+    	<xsd:attribute name="uuid_it" type="uuid"></xsd:attribute>
+    	<xsd:attribute name="uuid_ext" type="uuid"></xsd:attribute>
+    </xsd:complexType>
 </xsd:schema>
