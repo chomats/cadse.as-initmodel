@@ -36,8 +36,8 @@
 	</taskdef>
 	
 	<xjc schema="../schema/WorkspaceModel.xsd" 
-		 destdir="../sources" 
-		 package="fede.workspace.tool.loadmodel.model.jaxb"
+		 destdir="../src/main/java" 
+		 package="fr.imag.adele.fede.workspace.as.initmodel.jaxb"
 	/>
 	
 </target>
