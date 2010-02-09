@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Export-Package: fr.imag.adele.fede.workspace.as.initmodel;uses:="fr.im
+ ag.adele.cadse.core,fr.imag.adele.cadse.core.var,fr.imag.adele.cadse.
+ core.attribute,javax.xml.bind,fr.imag.adele.fede.workspace.as.initmod
+ el.jaxb";version="2.3.0",fr.imag.adele.fede.workspace.as.initmodel.ja
+ xb;uses:="javax.xml.bind.annotation";version="2.3.0"
+Private-Package: .
+Built-By: chomats
+Tool: Bnd-0.0.357
+Bundle-Name: fr.imag.adele.cadse.as.initmodel
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: Adele/LIG/ Grenoble University, France
+Build-Jdk: 1.6.0_17
+Bundle-Version: 2.3.0.SNAPSHOT
+Bundle-ManifestVersion: 2
+Import-Package: fr.imag.adele.cadse.core;version="2.3",fr.imag.adele.c
+ adse.core.attribute;version="2.3",fr.imag.adele.cadse.core.var;versio
+ n="2.3",fr.imag.adele.fede.workspace.as.initmodel;version="2.3",fr.im
+ ag.adele.fede.workspace.as.initmodel.jaxb;version="2.3",javax.xml.bin
+ d,javax.xml.bind.annotation
+Bundle-SymbolicName: fr.imag.adele.cadse.as.initmodel;singleton:=true
+Bundle-DocURL: http://www-adele.imag.fr/
+
