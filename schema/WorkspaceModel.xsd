@@ -100,6 +100,7 @@
 				<xsd:attribute name="pattern-id" type="xsd:string"/>
 				<xsd:attribute name="pattern-valid-id" type="xsd:string"/>
 				<xsd:attribute name="hidden" type="xsd:boolean"/>
+				<xsd:attribute name="default-short-name" type="xsd:string"/>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
