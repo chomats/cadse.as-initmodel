@@ -1,45 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>fr.imag.adele.cadse</groupId>
-    <artifactId>as.initmodel</artifactId>
-    <name>fr.imag.adele.cadse.as.initmodel</name>
-    <version>2.3.0-SNAPSHOT</version>
-    <packaging>bundle</packaging>
-    <parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>fr.imag.adele.cadse</groupId>
+	<artifactId>as.initmodel</artifactId>
+	<name>fr.imag.adele.cadse.as.initmodel</name>
+	<version>2.3.0-SNAPSHOT</version>
+	<packaging>bundle</packaging>
+	<parent>
 		<artifactId>fr.imag.adele.cadse.parent</artifactId>
 		<groupId>fr.imag.adele.cadse</groupId>
 		<version>2.3.0-SNAPSHOT</version>
 		<relativePath>../fr.imag.adele.cadse.parent</relativePath>
 	</parent>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Export-Package>fr.imag.adele.fede.workspace.as.initmodel;version="${version.cadse}",
-                        fr.imag.adele.fede.workspace.as.initmodel.jaxb;version="${version.cadse}"</Export-Package>
-                        <Import-Package>javax.xml.bind*;version=!,*</Import-Package>
-                    </instructions>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <dependencies>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api-osgi</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>as.cu</artifactId>
-        </dependency>
-    </dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Export-Package>fr.imag.adele.fede.workspace.as.initmodel;version="${version.cadse}",
+							fr.imag.adele.fede.workspace.as.initmodel.jaxb;version="${version.cadse}"</Export-Package>
+						<Import-Package>javax.xml.bind*;version=!,*</Import-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.sun.tools.xjc.maven2</groupId>
+				<artifactId>maven-jaxb-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<generatePackage>fr.imag.adele.fede.workspace.as.initmodel.jaxb</generatePackage>
+					<includeSchemas>
+						<includeSchema>**/*.xsd</includeSchema>
+					</includeSchemas>
+					<strict>true</strict>
+					<verbose>true</verbose>
+					<schemaDirectory>schema</schemaDirectory>
+					<generateDirectory>src/main/java</generateDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api-osgi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>as.cu</artifactId>
+		</dependency>
+	</dependencies>
 </project>
 
 
