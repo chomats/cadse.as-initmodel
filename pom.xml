@@ -24,7 +24,8 @@
 					<instructions>
 						<Export-Package>fr.imag.adele.fede.workspace.as.initmodel;version="${version.cadse}",
 							fr.imag.adele.fede.workspace.as.initmodel.jaxb;version="${version.cadse}"</Export-Package>
-						<Import-Package>javax.xml.bind*;version=!,*</Import-Package>
+						<Import-Package>com.sun.xml.internal.bind,
+						javax.xml.bind*;version=!,*</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>
