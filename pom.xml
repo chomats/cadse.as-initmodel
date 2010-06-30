@@ -24,8 +24,7 @@
 					<instructions>
 						<Export-Package>fr.imag.adele.fede.workspace.as.initmodel;version="${version.cadse}",
 							fr.imag.adele.fede.workspace.as.initmodel.jaxb;version="${version.cadse}"</Export-Package>
-						<Import-Package>com.sun.xml.internal.bind,
-						javax.xml.bind*;version=!,*</Import-Package>
+						<Import-Package>javax.xml.bind*;version=!,*</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>
@@ -53,10 +52,6 @@
 		</plugins>
 	</build>
 	<dependencies>
-		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api-osgi</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>as.cu</artifactId>
