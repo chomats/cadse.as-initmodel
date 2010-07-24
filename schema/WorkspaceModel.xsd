@@ -250,6 +250,8 @@
 			</xsd:element>
 			<xsd:element maxOccurs="unbounded" minOccurs="0" name="attributes-value" type="c-values-type">
 			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="adapters" type="xsd:string">
+			</xsd:element>
 		</xsd:sequence>
 		<xsd:attribute name="id" type="uuid" use="required"/>
 		<xsd:attribute name="type" type="uuid" use="required"/>
