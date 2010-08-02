@@ -11,9 +11,14 @@
 	<parent>
 		<artifactId>fr.imag.adele.cadse.parent.osgi</artifactId>
 		<groupId>fr.imag.adele.cadse</groupId>
-		<version>2.3.0-SNAPSHOT</version>
+		<version>2.3.1</version>
 		<relativePath>../fr.imag.adele.cadse.parent.osgi</relativePath>
 	</parent>
+        <scm>
+                <connection>scm:hg:ssh://hg@henry/${groupId}.${artifactId}</connection>
+                <developerConnection>scm:hg:ssh://hg@henry/${groupId}.${artifactId}</developerConnection>
+                <url>http://henry:8000/${groupId}.${artifactId}</url>
+        </scm>
 	<build>
 		<plugins>
 			<plugin>
@@ -55,6 +60,7 @@
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>as.cu</artifactId>
+			<version>2.3.1</version>
 		</dependency>
 	</dependencies>
 </project>
