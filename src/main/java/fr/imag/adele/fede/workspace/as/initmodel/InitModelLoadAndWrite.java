@@ -58,7 +58,5 @@ public abstract class InitModelLoadAndWrite extends ObjectAdapter<InitModelLoadA
 		return CadseGCST.ATTRIBUTE;
 	}
 	
-	public abstract Object getCadseRootAttributeValue(ContextVariable cxt, IAttributeType<?> attType, Item attribute);
-
 	public abstract boolean isCadseRootRequireAttribute(Item attribute);
 }
